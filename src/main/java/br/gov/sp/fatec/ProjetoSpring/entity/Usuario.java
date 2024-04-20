@@ -1,5 +1,7 @@
 package br.gov.sp.fatec.ProjetoSpring.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,6 +19,7 @@ public class Usuario {
     @Column(name = "usr_nome")
     private String nome;
     @Column(name = "usr_senha")
+    @JsonIgnore
     private String senha;
 
     public Usuario() { }
